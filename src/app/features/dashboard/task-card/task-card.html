@@ -1,14 +1,14 @@
 <p-card [ngClass]="{ 'high-priority': severity === 'danger' }">
     <ng-template #header>
-        <p-tag [severity]="severity" [value]="priorityLabel" />
+        <p-tag [severity]="severity" [value]="task().priority | taskPriority" />
     </ng-template>
     <ng-template #title> {{ task().title }} </ng-template>
     <ng-template #subtitle> {{ task().description }} </ng-template>
     @if (task().completedAt) {
-    <p>{{ completedAt }}</p>
+    <p>{{ task().completedAt | taskCompleteDate }}</p>
     } @else {
     <p>
-        {{ dueDate }}
+        {{ this.task().dueDate | taskDueDate: this.task().isOverdue }}
     </p>
     }
 
@@ -18,7 +18,7 @@
     <ng-template #footer>
         <div class="task-assignee">
             <span class="assignee-avatar">{{ task().assignee.avatar }}</span>
-            <span class="assignee-name">{{ assigneeFirstName }}</span>
+            <span class="assignee-name">{{ task().assignee.name | taskAssigneeName }}</span>
         </div>
     </ng-template>
 </p-card>

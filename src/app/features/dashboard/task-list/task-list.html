@@ -1,6 +1,6 @@
 <div class="main-layout">
     <div class="d-flex justify-content-between list-header">
-        <p class="">{{ header() }}</p>
+        <p class="">{{ tasks()[0].status | taskStatus}} </p>
         <span class="tasks-count">{{ tasksCount() }}</span>
     </div>
     <div class="d-flex flex-column gap-2">

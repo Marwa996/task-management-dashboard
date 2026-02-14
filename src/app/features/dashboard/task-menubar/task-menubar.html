@@ -1,7 +1,7 @@
 <div class="card">
     <p-menubar [model]="items()">
         <ng-template #item let-item>
-            <button pButton variant="text" [label]="item.label"
+            <button pButton variant="text" [label]="item.id | taskStatus"
                 [severity]="item.styleClass === 'active-item' ? 'primary' : 'secondary'" class="item">
             </button>
         </ng-template>

@@ -6,10 +6,23 @@ import { Task } from '../../../core/models';
 import { TaskPriorityService } from '../../../shared/services/task-priority/task-priority.service';
 import { TaskPrioritySeverity } from '../../../core/types';
 import { CommonModule } from '@angular/common';
+import { TaskPriorityPipe } from '../../../shared/pipes/task-priority/task-priority-pipe';
+import { TaskDueDatePipe } from '../../../shared/pipes/task-due-date/task-due-date-pipe';
+import { TaskCompleteDatePipe } from '../../../shared/pipes/task-complete-date/task-complete-date-pipe';
+import { TaskAssigneeNamePipe } from '../../../shared/pipes/task-assignee-name/task-assignee-name-pipe';
 
 @Component({
   selector: 'app-task-card',
-  imports: [CommonModule, CardModule, TagModule, ButtonModule],
+  imports: [
+    CommonModule,
+    CardModule,
+    TagModule,
+    ButtonModule,
+    TaskPriorityPipe,
+    TaskDueDatePipe,
+    TaskCompleteDatePipe,
+    TaskAssigneeNamePipe,
+  ],
   templateUrl: './task-card.html',
   styleUrl: './task-card.scss',
 })
@@ -19,21 +32,5 @@ export class TaskCard {
 
   get severity(): TaskPrioritySeverity {
     return this.taskPriorityService.getSeverity(this.task().priority);
-  }
-
-  get priorityLabel(): string {
-    return this.taskPriorityService.getPriorityLabel(this.task().priority);
-  }
-
-  get assigneeFirstName(): string {
-    return `@` + this.task().assignee.name.split(' ')[0];
-  }
-
-  get dueDate(): string {
-    return this.taskPriorityService.getDueDateLabel(this.task().dueDate, this.task().isOverdue);
-  }
-
-  get completedAt(): string {
-    return this.taskPriorityService.getCompletedAtLabel(this.task().completedAt);
   }
 }

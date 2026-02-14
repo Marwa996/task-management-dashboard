@@ -1,0 +1,31 @@
+@use '../../../styles/variables' as vars;
+.toolbar-header {
+  .header-icon {
+    background-color: vars.$main-color;
+    padding: 5px;
+    border-radius: 8px;
+  }
+  .header-title {
+    font-weight: 700;
+    font-size: 19px;
+    color: vars.$main-color;
+  }
+}
+.toolbar-notifications {
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  .notification-icon {
+    background-color: vars.$main-color;
+    padding: 5px;
+    border-radius: 8px;
+  }
+  .notifications-username {
+    border-radius: 20px;
+    color: vars.$white-color;
+    background-color: vars.$main-color;
+    padding: 10px;
+  }
+}

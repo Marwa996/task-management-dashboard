@@ -1,0 +1,8 @@
+<div class="d-flex flex-column gap-2 p-3">
+    @for (item of menuItems; track $index) {
+    <button pButton type="button" [severity]="rla.isActive ? 'primary' : 'secondary'" [outlined]="!rla.isActive"
+        [ngClass]="rla.isActive? 'active-button':''" [routerLink]="item.routerLink" routerLinkActive
+        #rla="routerLinkActive" class="sidebar-button d-flex align-items-start">
+        {{ item.label }}
+    </button>}
+</div>

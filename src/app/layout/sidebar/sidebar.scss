@@ -1,0 +1,30 @@
+@use '../../../styles/variables' as vars;
+
+.sidebar-button {
+  width: 100%;
+  justify-content: flex-start; // aligns text left
+  text-align: left;
+
+  &.p-button {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  &.p-button-outlined {
+    background-color: transparent;
+    border-color: transparent;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.04);
+    }
+  }
+}
+
+.active-button {
+  background-color: vars.$main-color !important;
+  color: vars.$white-color;
+
+  &:hover {
+    color: vars.$white-color;
+  }
+}

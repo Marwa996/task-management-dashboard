@@ -15,13 +15,8 @@
     "target": "ES2022",
     "module": "preserve",
     "paths": {
-      "models": [
-        "./dist/models"
-      ],
-      "ui-components": [
-        "./dist/ui-components",
-        "./dist/ui-components"
-      ]
+      "models": ["./dist/models"],
+      "ui-components": ["./dist/ui-components"]
     }
   },
   "angularCompilerOptions": {

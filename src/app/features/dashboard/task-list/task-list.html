@@ -1,0 +1,11 @@
+<div class="main-layout">
+    <div class="d-flex justify-content-between list-header">
+        <p class="">{{ header() }}</p>
+        <span class="tasks-count">{{ tasksCount() }}</span>
+    </div>
+    <div class="d-flex flex-column gap-2">
+        @for (task of tasks(); track task.id) {
+        <app-task-card [task]="task" class="w-100"></app-task-card>
+        }
+    </div>
+</div>

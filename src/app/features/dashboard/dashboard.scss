@@ -1,0 +1,20 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.list-container {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  flex: 1;
+  align-items: stretch;
+}
+
+/* Each list takes 1/3 of container width max */
+.list-container > app-dashboard-task-list {
+  flex: 0 0 calc((100% - 32px) / 3);
+  min-width: calc((100% - 32px) / 3);
+
+  display: block;
+}

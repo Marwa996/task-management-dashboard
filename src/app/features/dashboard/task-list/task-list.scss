@@ -1,0 +1,32 @@
+@use '../../../../../src/styles/variables' as vars;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.main-layout {
+  border: 1px solid vars.$border-color;
+  border-radius: 8px;
+  padding: 16px 8px;
+  background-color: vars.$light-background-color;
+  .list-header {
+    border-bottom: 2px solid vars.$border-color;
+    margin-bottom: 10px;
+    p {
+      font-size: vars.$font-size-large;
+      font-weight: 700;
+      padding: 0 10px;
+    }
+    .tasks-count {
+      width: 24px;
+      height: 20px;
+      background-color: vars.$border-color;
+      color: vars.$dark-font-color;
+      font-size: vars.$font-size-small;
+      font-weight: 700;
+      border-radius: 12px;
+      padding: 2px 9px;
+    }
+  }
+}

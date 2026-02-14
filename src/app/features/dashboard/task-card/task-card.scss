@@ -1,0 +1,38 @@
+@use '../../../../../src/styles/variables' as vars;
+
+.p-card {
+  border-radius: 8px;
+  padding: 16px 8px;
+  border: 1px solid vars.$border-color;
+  .p-card-header {
+    padding: 0px 10px;
+  }
+  .p-header-title {
+    font-size: vars.$font-size-medium;
+    font-weight: 700;
+    color: vars.$dark-font-color;
+  }
+}
+
+.task-assignee {
+  font-weight: 700;
+  border-top: 1px solid vars.$border-color;
+
+  .assignee-name {
+    font-size: vars.$font-size-medium;
+    padding: 5px;
+  }
+
+  .assignee-avatar {
+    font-size: vars.$font-size-small;
+    border-radius: 20px;
+    color: vars.$white-color;
+    background-color: vars.$main-color;
+    padding: 6px;
+  }
+}
+
+.high-priority {
+  border-left: 4px solid vars.$danger-border-color;
+  background-color: vars.$danger-background-color;
+}

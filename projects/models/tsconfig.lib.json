@@ -10,9 +10,10 @@
     "types": []
   },
   "include": [
-    "src/**/*.ts"
+    "src/**/*.ts",
+    "../../src/app/core/services/task/models/index.ts",
+    "../../src/app/core/services/task.spec.ts",
+    "../../src/app/core/services/task.ts"
   ],
-  "exclude": [
-    "**/*.spec.ts"
-  ]
+  "exclude": ["**/*.spec.ts"]
 }

@@ -1,11 +1,11 @@
-import { List } from '../../projects/ui-components/src/lib/list/list';
-import { Card } from './../../projects/ui-components/src/lib/card/card';
 import { Component, signal } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
+import { Layout } from './layout/layout';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [ButtonModule, Card, List],
+  imports: [ButtonModule, Layout, RouterModule],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })

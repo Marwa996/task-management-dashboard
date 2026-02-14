@@ -1,0 +1,10 @@
+<div class="content">
+    <app-dashboard-statistics></app-dashboard-statistics>
+    <app-dashboard-task-menubar [availableTaskLists]="availableTaskLists()"
+        (selectedList)="onTaskListSelect($event)"></app-dashboard-task-menubar>
+    <div class="list-container">
+        @for(group of groupKeys(); track group) {
+        <app-dashboard-task-list [header]="group" [tasks]="groupedTasks()[group]"></app-dashboard-task-list>
+        }
+    </div>
+</div>

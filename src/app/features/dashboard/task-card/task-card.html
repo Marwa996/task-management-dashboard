@@ -1,0 +1,24 @@
+<p-card [ngClass]="{ 'high-priority': severity === 'danger' }">
+    <ng-template #header>
+        <p-tag [severity]="severity" [value]="priorityLabel" />
+    </ng-template>
+    <ng-template #title> {{ task().title }} </ng-template>
+    <ng-template #subtitle> {{ task().description }} </ng-template>
+    @if (task().completedAt) {
+    <p>{{ completedAt }}</p>
+    } @else {
+    <p>
+        {{ dueDate }}
+    </p>
+    }
+
+    @for (tag of task().tags; track $index) {
+    <p>️{{ tag }}</p>
+    }
+    <ng-template #footer>
+        <div class="task-assignee">
+            <span class="assignee-avatar">{{ task().assignee.avatar }}</span>
+            <span class="assignee-name">{{ assigneeFirstName }}</span>
+        </div>
+    </ng-template>
+</p-card>

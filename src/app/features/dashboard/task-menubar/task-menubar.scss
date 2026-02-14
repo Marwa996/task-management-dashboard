@@ -1,0 +1,25 @@
+@use '../../../../styles/variables' as vars;
+
+.card {
+  .p-menubar {
+    background-color: transparent;
+    border: none;
+    .item {
+      background-color: transparent;
+
+      &.p-button-secondary {
+        color: var(--p-text-color);
+        border: none;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.04);
+        }
+      }
+
+      &.p-button-primary {
+        background-color: var(--p-primary-500);
+        color: white;
+      }
+    }
+  }
+}

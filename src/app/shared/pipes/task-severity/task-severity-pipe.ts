@@ -1,12 +1,12 @@
-import { Injectable } from '@angular/core';
+import { Pipe, PipeTransform } from '@angular/core';
 import { TaskPriority, TaskPrioritySeverity } from '../../../core/types';
 
-@Injectable({
-  providedIn: 'root',
+@Pipe({
+  name: 'taskSeverity',
 })
-export class TaskPriorityService {
-  getSeverity(severity: TaskPriority): TaskPrioritySeverity {
-    switch (severity) {
+export class TaskSeverityPipe implements PipeTransform {
+  transform(value: TaskPriority): TaskPrioritySeverity {
+    switch (value) {
       case 'low':
         return 'secondary';
       case 'medium':

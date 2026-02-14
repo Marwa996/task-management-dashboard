@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @use 'bootstrap/scss/bootstrap';
+@use 'primeicons/primeicons.css';
 
 html,
 body {
@@ -7,6 +8,5 @@ body {
 }
 
 body {
-  background-color: #f5f7fa;
   margin: 0;
 }

@@ -1,38 +1,69 @@
 @use '../../../../../src/styles/variables' as vars;
 
-.p-card {
+.task-container {
   border-radius: 8px;
-  padding: 16px 8px;
   border: 1px solid vars.$border-color;
-  .p-card-header {
-    padding: 0px 10px;
+  padding: 8px 16px;
+  .task-priority-tag {
+    margin-bottom: 8px;
+    span {
+      border-radius: 4px;
+      padding: 4px 8px;
+      font-weight: 700;
+      font-size: vars.$font-size-small;
+      &.high-priority {
+        color: vars.$danger-color;
+        background-color: vars.$danger-background-color;
+      }
+      &.medium-priority {
+        color: vars.$success-color;
+        background-color: vars.$warn-background-color;
+      }
+      &.low-priority {
+        color: vars.$success-color;
+        background-color: vars.$warn-background-color;
+      }
+    }
   }
-  .p-header-title {
-    font-size: vars.$font-size-medium;
-    font-weight: 700;
+  .task-title {
+    font-size: vars.$font-size-large;
     color: vars.$dark-font-color;
+    font-weight: 700;
   }
-}
-
-.task-assignee {
-  font-weight: 700;
-  border-top: 1px solid vars.$border-color;
-
-  .assignee-name {
+  .muted-text,
+  .task-tags {
+    color: vars.$mute-font-color;
+    font-weight: 400;
+  }
+  .muted-text {
     font-size: vars.$font-size-medium;
-    padding: 5px;
   }
+  .task-tags {
+    font-size: 12px;
+  }
+  .task-assignee {
+    font-weight: 700;
+    border-top: 1px solid vars.$border-color;
+    padding: 8px 0;
+    .assignee-name {
+      font-size: vars.$font-size-medium;
+      padding: 5px;
+      font-weight: 400;
+    }
 
-  .assignee-avatar {
-    font-size: vars.$font-size-small;
-    border-radius: 20px;
-    color: vars.$white-color;
-    background-color: vars.$main-color;
-    padding: 6px;
+    .assignee-avatar {
+      font-size: vars.$font-size-small;
+      border-radius: 20px;
+      color: vars.$white-color;
+      background-color: vars.$main-color;
+      padding: 6px;
+    }
   }
 }
-
-.high-priority {
+.task-container .p-card-body {
+  padding-bottom: 0;
+}
+.high-priority-task {
   border-left: 4px solid vars.$danger-border-color;
   background-color: vars.$danger-background-color;
 }

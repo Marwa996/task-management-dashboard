@@ -1,3 +1,5 @@
+@use '../../../../../src/styles/variables' as vars;
+
 .main-container {
   display: flex;
   gap: 16px;
@@ -32,12 +34,15 @@
 }
 
 .card-count {
-  font-size: 28px;
-  font-weight: 600;
+  font-size: vars.$font-size-xlarge;
+  color: vars.$dark-font-color;
+  font-weight: 700;
+  margin-top: 15px;
 }
 
 .card-stats {
-  font-size: 12px;
+  font-size: vars.$font-size-medium;
+  margin-bottom: 0;
 }
 
 .up-stats {

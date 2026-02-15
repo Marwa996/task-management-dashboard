@@ -33,4 +33,15 @@ export class TaskCard {
   get severity(): TaskPrioritySeverity {
     return this.taskPriorityService.getSeverity(this.task().priority);
   }
+
+  get priorityClass(): string {
+    switch (this.task().priority) {
+      case 'high':
+        return 'high-priority';
+      case 'medium':
+        return 'medium-priority';
+      case 'low':
+        return 'low-priority';
+    }
+  }
 }

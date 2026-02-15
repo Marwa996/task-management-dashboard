@@ -8,11 +8,11 @@ export class TaskStatusPipe implements PipeTransform {
   transform(value?: TaskStatus): string {
     switch (value) {
       case 'todo':
-        return 'TO DO';
+        return 'To Do';
       case 'in_progress':
-        return 'IN PROGRESS';
+        return 'In Progress';
       case 'done':
-        return 'DONE';
+        return 'Done';
       default:
         return value ? (value as string).toUpperCase() : 'All';
     }

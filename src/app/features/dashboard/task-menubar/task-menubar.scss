@@ -6,7 +6,7 @@
     border: none;
     .item {
       background-color: transparent;
-
+      font-size: vars.$font-size-large;
       &.p-button-secondary {
         color: var(--p-text-color);
         border: none;
@@ -20,6 +20,11 @@
         background-color: var(--p-primary-500);
         color: white;
       }
+    }
+  }
+  .actions {
+    .action-button {
+      font-size: vars.$font-size-large;
     }
   }
 }

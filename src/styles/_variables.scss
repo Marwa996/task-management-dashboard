@@ -1,20 +1,24 @@
 // Color variables
 $main-color: #1976d2;
 $white-color: #ffffff;
-
+$warn-color: #f57c00;
+$danger-color: #d32f2f;
+$success-color: #388e3c;
 // Font sizes
 $font-size-small: 10px;
 $font-size-medium: 11.8px;
 $font-size-large: 14px;
+$font-size-xlarge: 28px;
 
 //Font-colors
 $dark-font-color: #212121;
-
+$mute-font-color: #757575;
 // Border colors
 $border-color: #e0e0e0;
 $danger-border-color: #d32f2f;
 
 // Background colors
-$danger-background-color: #ffebee;
-$light-background-color: white;
 $background-color: #f5f7fa;
+$light-background-color: white;
+$danger-background-color: #ffebee;
+$warn-background-color: #fff3e0;

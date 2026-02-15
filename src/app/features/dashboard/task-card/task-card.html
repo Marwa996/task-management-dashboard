@@ -1,4 +1,4 @@
-<div class="task-container" [ngClass]="{ 'high-priority-task': task().priority === 'high' }">
+<div class="task-container" [ngClass]="{'high-priority-task': task().priority === 'high' && task().isOverdue }">
     <div class="task-priority-tag">
         <span [ngClass]="priorityClass">{{task().priority
             | taskPriority}}</span>

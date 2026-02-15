@@ -1,6 +1,9 @@
 @use '../../../../styles/variables' as vars;
 
 .card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
   .p-menubar {
     background-color: transparent;
     border: none;
@@ -23,7 +26,7 @@
     }
   }
   .actions {
-    .action-button {
+    ::ng-deep .p-button {
       font-size: vars.$font-size-large;
     }
   }

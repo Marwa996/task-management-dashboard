@@ -17,10 +17,13 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  .notification-icon {
-    background-color: vars.$main-color;
-    padding: 5px;
-    border-radius: 8px;
+  cursor: pointer;
+  .notifications-icon {
+    padding: 10px;
+    border-radius: 20px;
+    &:hover {
+      background: var(--color-black-5, #0000000d);
+    }
   }
   .notifications-username {
     border-radius: 20px;
@@ -28,4 +31,7 @@
     background-color: vars.$main-color;
     padding: 10px;
   }
+}
+.search-input {
+  width: 400px;
 }

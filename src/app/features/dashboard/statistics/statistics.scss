@@ -8,6 +8,8 @@
   .dashboard-card {
     flex: 1; // equal width
     display: flex;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
   }
 
   .dashboard-card .p-card {
@@ -43,14 +45,5 @@
 .card-stats {
   font-size: vars.$font-size-medium;
   margin-bottom: 0;
-}
-
-.up-stats {
-  color: green;
-}
-.normal-stats {
-  color: grey;
-}
-.down-stats {
-  color: red;
+  font-weight: 400;
 }

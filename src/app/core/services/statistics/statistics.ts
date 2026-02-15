@@ -1,16 +1,16 @@
 import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { APIService } from '../api/api.service';
-import { TasksResponse } from '../../models';
+import { StatisticsResponse } from '../../models/responses/statistics-response.model';
 
 @Injectable({
   providedIn: 'root',
 })
-export class TaskService {
+export class StatisticsService {
   private apiUrl = '/data-fetching';
   private apiService = inject(APIService);
 
-  getTasks(): Observable<TasksResponse> {
-    return this.apiService.get<TasksResponse>(this.apiUrl + '/tasks.json');
+  getStatistics(): Observable<StatisticsResponse> {
+    return this.apiService.get<StatisticsResponse>(this.apiUrl + '/statistics.json');
   }
 }
